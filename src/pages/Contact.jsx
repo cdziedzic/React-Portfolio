@@ -1,20 +1,34 @@
 export default function Contact() {
+  const [email, setEmail] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [otherField, setOtherField] = useState('');
+
+
+
   return (
     <div>
+
       <h1>Contact Page</h1>
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
+      <label htmlFor="">Name:</label>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+        </div>
+        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
+      </div>
+        <label htmlFor="">E-mail Address:</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Please enter your e-mail address" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+        <div class="input-group-append">
+        </div>
+      </div>
+      <label htmlFor="">Message:</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+
+        </div>
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+      </div>
+        <button>Submit</button>
     </div>
   );
 }
