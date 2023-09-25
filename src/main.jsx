@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
+import Footer from './components/Footer';
 
 
 const router = createBrowserRouter([
