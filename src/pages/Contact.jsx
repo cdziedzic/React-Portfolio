@@ -1,19 +1,27 @@
 import { useState } from "react";
 
 export default function Contact() {
+  //state variables for error and submit handling
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
   const [messageField, setMessageField] = useState('');
   const [messageError, setMessageError] = useState('')
-  const [isMessageActive, setIsMessageActive] = useState(false)
+  const [isMessageActive, setIsMessageActive] = useState(true)
+  const [name, setName] = useState('');
+  //set focus status for message input box
   const onFocus = () => setIsMessageActive(true)
-const onBlur = () => setIsMessageActive(false)
+  const onBlur = () => setIsMessageActive(false)
+
+  //function to handle name input
+  const handleNameChange = (event) => {
+    const newName = event.target.value;
+    setName(newName);
+  };
 
   // Function to handle email input and validation
   const handleEmailChange = (event) => {
     const value = event.target.value;
-    setEmail(value);
-
+    //check if email has text and is valid or display error
     if (!value) {
       setEmailError('E-mail is required');
     }
@@ -22,24 +30,26 @@ const onBlur = () => setIsMessageActive(false)
     } else {
       setEmailError('');
     }
+    setEmail(value);
   };
+  
   const handleMessageChange = (event) => {
     const value = event.target.value;
     setMessageField(value);
+   //check if message field is active or display error
+    if (!isMessageActive) {
       if (!value) {
         setMessageError('Message is required');
       }
       else {
         setMessageError('');
       }
-    
+    }
   };
 
-
+//handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    // Additional validation logic for other fields can be added here
 
     // If email is valid, you can proceed with form submission
     if (isValidEmail(email)) {
@@ -49,7 +59,7 @@ const onBlur = () => setIsMessageActive(false)
       setEmailError('Invalid email address');
     }
   };
- 
+
   // Function to check if the email address is valid
   const isValidEmail = (email) => {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -59,8 +69,19 @@ const onBlur = () => setIsMessageActive(false)
 
   return (
     <div>
-      <h1>Form Validation</h1>
+      <h1>Contact me</h1>
       <form onSubmit={handleSubmit}>
+      {/* name input */}
+      <label htmlFor="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value={name}
+          onChange={handleNameChange}
+        />
+        <br />
+        {/* email input */}
         <label htmlFor="email">Email Address:</label>
         <input
           type="text"
@@ -72,7 +93,9 @@ const onBlur = () => setIsMessageActive(false)
         <span style={{ color: 'red' }}>{emailError}</span>
         <br />
         <label htmlFor="messageField">Message:</label>
+        {/* for testing purposes only */}
         <p>Message Field is Active: {isMessageActive ? 'Yes' : 'No'}</p>
+        {/* enter message field */}
         <input
           type="text"
           id="messageField"
@@ -84,9 +107,10 @@ const onBlur = () => setIsMessageActive(false)
         />
         <span style={{ color: 'red' }}>{messageError}</span>
         <br />
+        {/* submit button */}
         <input type="submit" value="Submit" />
-      </form>
-     
+      </form >
+
     </div>
   );
 }
