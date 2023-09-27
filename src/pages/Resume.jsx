@@ -1,8 +1,10 @@
+import file from '../assets/ChrisDziedzic resume.pdf'
+
 export default function Resume() {
   return (
     <div>
       <h1>Resume</h1>
-      <h2>Download my <a href="">Resume</a></h2>
+      <h2>Download my <a href={file} download="Chris-Dziedzic-Resume">Resume</a></h2>
       <br />
       Front-end Proficienicies
         <li>HTML</li>

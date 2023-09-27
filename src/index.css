@@ -2,7 +2,7 @@
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
-  color: rgba(250, 250, 250, 0.8) !important;
+  color: rgba(250, 250, 250, 0.8)
 }
 
 
@@ -14,7 +14,11 @@ body {
   background: #111 !important;
 }
 
+.headshot {
+  
+}
 
+/* portfolio cards */
 .card {
   background: #222 !important;
   border: 1px solid #dd2476 !important;
@@ -23,16 +27,16 @@ body {
   min-height: 50vh;
   max-height: 50vh;
 }
-
+/* portfolio card img */
 .card img {
   padding: 5%;
 }
-
+/* portfolio card text */
 .card-body {
   min-height: 50%;
   max-height: 50%;
 }
-
+/* portfolio cards */
 .btn {
   border: 5px solid !important;
   border-image-slice: 1 !important;
@@ -43,7 +47,7 @@ body {
   text-decoration: none;
   transition: all .4s ease;
 }
-
+/* portfolio cards */
 .btn:hover, .btn:focus {
       background: var(--gradient) !important;
   -webkit-background-clip: none !important;

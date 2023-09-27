@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div>
       <h1>About Page</h1>
-      <img src={headshot} alt="headshot" />
+      <img id="headshot" src={headshot} alt="headshot" />
       <p>
         Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
         Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
