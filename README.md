@@ -8,7 +8,7 @@ This is my project portfolio website. The front end was created using React. The
 
 github: https://github.com/cdziedzic/React-Portfolio
 
-Deployed website:
+Deployed website: https://cute-pavlova-43f29c.netlify.app/
 
 
 ## Screenshot
