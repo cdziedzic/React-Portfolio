@@ -6,7 +6,6 @@ export default function Contact() {
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
   const [messageField, setMessageField] = useState('');
-  const [messageError, setMessageError] = useState('')
   const [isMessageActive, setIsMessageActive] = useState(true)
   //set focus status for message input box
   const onFocus = () => setIsMessageActive(true)
@@ -37,21 +36,7 @@ export default function Contact() {
     const value = event.target.value;
     console.log(value)
     setMessageField(value);
-    console.log(isMessageActive)
-   //check if message field is active or display error
-    if (!isMessageActive)  {
-      console.log("message not active")
-      if (messageField === '') {
-        console.log("messageField", messageField)
-        setMessageError('Message is required');
-      }
-      else {
-        console.log(isMessageActive)
-        setMessageError('');
-      }
-    } else if (!isMessageActive && messageField === ""){
-      setMessageError('Message is required');
-    }
+    
   };
 
 //handle form submission
@@ -112,7 +97,8 @@ export default function Contact() {
           value={messageField}
           onChange={(event)=>handleMessageChange(event)}
         />
-        <span style={{ color: 'red' }}>{messageError}</span>
+        {/* check for a message in the message input field and display error if none and field is inactive */}
+        {!isMessageActive && messageField === ""? <span style={{ color: 'red' }}>message is required</span> : ""}
         <br />
         {/* submit button */}
         <input type="submit" value="Submit" />
