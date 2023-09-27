@@ -85,8 +85,6 @@ export default function Contact() {
         <span style={{ color: 'red' }}>{emailError}</span>
         <br />
         <label htmlFor="messageField">Message:</label>
-        {/* for testing purposes only */}
-        <p>Message Field is focused: {isMessageActive ? 'Yes' : 'No'}</p>
         {/* enter message field */}
         <input
           type="text"

@@ -4,8 +4,8 @@ import projects from "../projects";
 export default function Portfolio() {
   return (
     <> 
-    <h1>Blog Page</h1>
-    <div className="container d-flex flex-wrap">
+    <h1>My projects</h1>
+    <div>
   
        <Project projects={projects} />
       
