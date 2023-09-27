@@ -2,6 +2,7 @@
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
+  color: rgba(250, 250, 250, 0.8) !important;
 }
 
 
@@ -13,11 +14,23 @@ body {
   background: #111 !important;
 }
 
+
 .card {
   background: #222 !important;
   border: 1px solid #dd2476 !important;
   color: rgba(250, 250, 250, 0.8) !important;
   margin-bottom: 2rem !important;
+  min-height: 50vh;
+  max-height: 50vh;
+}
+
+.card img {
+  padding: 5%;
+}
+
+.card-body {
+  min-height: 50%;
+  max-height: 50%;
 }
 
 .btn {

@@ -3,7 +3,8 @@ export default function Resume() {
     <div>
       <h1>Resume</h1>
       <h2>Download my <a href="">Resume</a></h2>
-      <ul> Front-end Proficienicies</ul>
+      <br />
+      Front-end Proficienicies
         <li>HTML</li>
         <li>CSS</li>
         <li>JavaScript</li>
@@ -11,8 +12,8 @@ export default function Resume() {
         <li>Responsive Design</li>
         <li>React</li>
 
-        
-      <ul>Back-end Proficiencies</ul>  
+        <br />
+      Back-end Proficiencies
         <li>APIs</li>
         <li>Node.js</li>
         <li>Express</li>
@@ -20,7 +21,9 @@ export default function Resume() {
         <li>MongoDb, Mongoose</li>
         <li>REST</li>
         <li>GraphQL</li>
-
+<br />
+<br />
+<br />
     </div>
   );
 }
