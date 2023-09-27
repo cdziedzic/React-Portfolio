@@ -3,11 +3,13 @@ import projects from "../projects";
 
 export default function Portfolio() {
   return (
-    <div>
-      <h1>Blog Page</h1>
+    <> 
+    <h1>Blog Page</h1>
+    <div className="container d-flex flex-wrap">
   
        <Project projects={projects} />
       
     </div>
+    </>
   );
 }

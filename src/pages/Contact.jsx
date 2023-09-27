@@ -2,12 +2,12 @@ import { useState } from "react";
 
 export default function Contact() {
   //state variables for error and submit handling
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
   const [messageField, setMessageField] = useState('');
   const [messageError, setMessageError] = useState('')
   const [isMessageActive, setIsMessageActive] = useState(true)
-  const [name, setName] = useState('');
   //set focus status for message input box
   const onFocus = () => setIsMessageActive(true)
   const onBlur = () => setIsMessageActive(false)
@@ -32,18 +32,25 @@ export default function Contact() {
     }
     setEmail(value);
   };
-  
+  //function for message change
   const handleMessageChange = (event) => {
     const value = event.target.value;
+    console.log(value)
     setMessageField(value);
+    console.log(isMessageActive)
    //check if message field is active or display error
-    if (!isMessageActive) {
-      if (!value) {
+    if (!isMessageActive)  {
+      console.log("message not active")
+      if (messageField === '') {
+        console.log("messageField", messageField)
         setMessageError('Message is required');
       }
       else {
+        console.log(isMessageActive)
         setMessageError('');
       }
+    } else if (!isMessageActive && messageField === ""){
+      setMessageError('Message is required');
     }
   };
 
@@ -94,7 +101,7 @@ export default function Contact() {
         <br />
         <label htmlFor="messageField">Message:</label>
         {/* for testing purposes only */}
-        <p>Message Field is Active: {isMessageActive ? 'Yes' : 'No'}</p>
+        <p>Message Field is focused: {isMessageActive ? 'Yes' : 'No'}</p>
         {/* enter message field */}
         <input
           type="text"
@@ -103,7 +110,7 @@ export default function Contact() {
           onBlur={onBlur}
           onFocus={onFocus}
           value={messageField}
-          onChange={handleMessageChange}
+          onChange={(event)=>handleMessageChange(event)}
         />
         <span style={{ color: 'red' }}>{messageError}</span>
         <br />

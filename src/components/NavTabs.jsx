@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-
+import './NavTabs.css'
 
 // assign each nav tab a variable name
 function NavTabs() {
