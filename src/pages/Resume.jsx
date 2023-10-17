@@ -1,4 +1,4 @@
-import file from '../assets/Chris-Dziedzic-resume.pdf'
+import file from '../assets/Chris-Dziedzic-Resume.pdf'
 
 export default function Resume() {
   return (
