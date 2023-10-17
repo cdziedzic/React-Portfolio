@@ -19,9 +19,10 @@ const projects = [
     {
         title: 'Votewave',
         github: 'https://github.com/brianmyer/votewave',
-        image: 'https://github.com/cdziedzic/Weather-dashboard/raw/main/assets/image.png',
-        technology: 'JavaScript, Node,js, SQL, handlebars, tailwind',
-        description: 'An app to quickly and easily create an online poll'
+        image: 'https://raw.githubusercontent.com/cdziedzic/React-Portfolio/main/src/assets/votewave.png',
+        technology: 'JavaScript, Node,js, SQL, Handlebars.js, Tailwind',
+        description: 'A website for users to quickly and easily create and vote in online polls.',
+        deployed: 'https://damp-beach-24784-675a670756cd.herokuapp.com/'
     },
   
     {

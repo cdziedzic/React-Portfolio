@@ -1,13 +1,13 @@
-import '../index.css'
+import './project.css'
 
 export default function Project({ projects }) {
     return (
 
-        <div className="container mx-auto mt-4">
+        <div className="container mt-4">
             <div className="row">
             {projects.map((project, index) => (
                     <div className="col-md-4" key={index}>
-                        <div className="card" style={{ width: "25rem" }}>
+                        <div className="card">
                             <img
                                 src={project.image}
                                 className="card-img-top"
