@@ -3,8 +3,8 @@ import file from '../assets/Chris-Dziedzic-Resume.pdf'
 export default function Resume() {
   return (
     <div>
-      <h1>Resume</h1>
-      <h2>Download my <a href={file} download="Chris-Dziedzic-Resume">Resume</a></h2>
+      <br />
+      <h2>Download my <a style={{color: 'blue'}} href={file} download="Chris-Dziedzic-Resume">Resume</a></h2>
       <br />
       Front-end Proficienicies
         <li>HTML</li>

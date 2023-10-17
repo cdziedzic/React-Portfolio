@@ -3,15 +3,9 @@ import headshot from '../assets/headshot.jpg'
 export default function Home() {
   return (
     <div>
-      <h1>About Page</h1>
-      <img id="headshot" src={headshot} alt="headshot" />
+      <img style={{borderRadius: '50%', height: '30vh'}} id="headshot" src={headshot} alt="headshot" />
       <p>
-        Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-        Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-        mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-        lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-        imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-        in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
+      Finance and economics professional with a background in managing high net worth client portfolios. Recently transitioning into Full Stack Web development via the University of Pennsylvania coding bootcamp. Possessing excellent problem-solving and communication skills, adept at process improvement, and proficient in both front and back end web development. Seeking a role that leverages web development skills to deliver innovative solutions and drive business growth.
       </p>
     </div>
   );
