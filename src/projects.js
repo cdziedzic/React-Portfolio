@@ -12,7 +12,7 @@ const projects = [
         github: 'https://github.com/danmac121/GameTracker',
         deployed: 'https://whispering-gorge-83170-943294fa5ddb.herokuapp.com/',
         image: 'https://raw.githubusercontent.com/cdziedzic/React-Portfolio/main/src/assets/accolade.png',
-        technology: 'React, MongoDb, GraphQL, Express, Node.js',
+        technology: 'React, MongoDb, GraphQL, Express, Node.js, Heroku',
         description: 'An application to track video games played, create custom achievements and monitor completion'
 
     },
@@ -46,7 +46,7 @@ const projects = [
         title: 'Note pad',
         github: 'https://github.com/cdziedzic/Note-pad',
         image: 'https://github.com/cdziedzic/Note-pad/raw/main/image.png',
-        technology: '',
+        technology: 'JavaScript, Node.js, Heroku',
         deployed: 'https://polar-woodland-57945-7aaeb104d679.herokuapp.com/',
         description: 'A website that allows users to create and manage notes. Add some text for additional description.'
     }

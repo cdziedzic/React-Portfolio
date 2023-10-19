@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Contact() {
+export default function RequestInfo() {
   //state variables for error and submit handling
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

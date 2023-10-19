@@ -1,12 +1,41 @@
 import './project.css'
+import { useState, useEffect } from 'react';
 
 export default function Project({ projects }) {
+    const [colClass, setColClass] = useState('col-md-4'); // Default class
+
+    useEffect(() => {
+      function handleResize() {
+        // Check the screen width and update the class accordingly
+        if (window.innerWidth <= 768) {
+          setColClass('col-md-3');
+        } 
+        if (window.innerWidth <= 992) {
+            setColClass('col-md-5');
+        }
+        else {
+          setColClass('col-md-4');
+        }
+      }
+
+      window.addEventListener('resize', handleResize);
+
+      // Initial class setup
+      handleResize();
+  
+      // Clean up the event listener when the component unmounts
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+
     return (
+        
 
         <div className="container mt-4">
-            <div className="row">
+            <div className="d-flex flex-wrap">
             {projects.map((project, index) => (
-                    <div className="col-md-4" key={index}>
+                    <div className={colClass} key={index}>
                         <div className="card">
                             <img
                                 src={project.image}
@@ -33,4 +62,5 @@ export default function Project({ projects }) {
                 </div>
 
     );
+              
 }
