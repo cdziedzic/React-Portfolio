@@ -47,7 +47,8 @@ const projects = [
         github: 'https://github.com/cdziedzic/Note-pad',
         image: 'https://github.com/cdziedzic/Note-pad/raw/main/image.png',
         technology: '',
-        deployed: ''
+        deployed: 'https://polar-woodland-57945-7aaeb104d679.herokuapp.com/',
+        description: 'A website that allows users to create and manage notes. Add some text for additional description.'
     }
 ]
 
