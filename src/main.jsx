@@ -8,7 +8,7 @@ import App from './App.jsx';
 import Error from './pages/Error'
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
-import Contact from './pages/requestInfo';
+import Contact from './pages/Contact';
 import Resume from './pages/Resume';
 import Footer from './components/Footer';
 
