@@ -34,7 +34,7 @@ body {
 /* portfolio card text */
 .card-body {
   height: auto;
-  min-height: 50%;
+  max-height: 50%;
 }
 
 /* portfolio cards */
